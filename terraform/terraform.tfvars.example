@@ -1,0 +1,25 @@
+# Terraform Variables Example
+# Copy this file to terraform.tfvars and fill in your values
+# NEVER commit terraform.tfvars to git
+
+aws_region          = "us-east-1"
+environment         = "production"
+report_bucket_name  = "aws-cost-optimizer-reports-YOUR-ACCOUNT-ID"
+lambda_function_name = "aws-cost-optimizer"
+
+# SENSITIVE - Get from https://api.slack.com/apps → Your App → Incoming Webhooks
+# NEVER commit the real webhook URL to git!
+slack_webhook_url   = "https://hooks.slack.com/services/YOUR_WORKSPACE_ID/YOUR_CHANNEL_ID/YOUR_WEBHOOK_TOKEN"
+slack_channel       = "#team-collab"
+
+# Cost optimization settings
+idle_ec2_days       = 7
+idle_rds_days       = 7
+auto_terminate      = false
+cost_threshold      = 50
+
+# Lambda configuration
+lambda_timeout      = 300
+lambda_memory       = 512
+log_retention_days  = 30
+

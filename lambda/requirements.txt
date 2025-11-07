@@ -1,0 +1,5 @@
+boto3
+slack_sdk
+requests
+python-dotenv
+
